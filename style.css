@@ -1,269 +1,379 @@
-/* GLOBAL STYLES
--------------------------------------------------- */
-/* Padding below the footer and lighter body text */
+/*
+
+All grid code is placed in a 'supports' rule (feature query) at the bottom of the CSS (Line 310). 
+        
+The 'supports' rule will only run if your browser supports CSS grid.
+
+Flexbox and floats are used as a fallback so that browsers which don't support grid will still recieve a similar layout.
+
+*/
+
+/* Base Styles */
+
+:root {
+    font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 body {
-  font-family: 'Source Code Pro', monospace;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  color: #5a5a5a;
-  background-color: #000;
+    font-family: "Open Sans", Arial, sans-serif;
+    min-height: 100vh;
+    background-color: #fafafa;
+    color: #262626;
+    padding-bottom: 3rem;
 }
 
-a {
-  color: rgb(18, 206, 164);
+img {
+    display: block;
 }
 
-a:hover {
-  color: #b4b4b4;
-  text-decoration: none;
+.container {
+    max-width: 93.5rem;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
-
-/* NAV BAR
--------------------------------------------------- */
-
-.navbar a:hover {
-  color: rgb(18, 206, 164) !important;
-  text-decoration: none;
+.btn {
+    display: inline-block;
+    font: inherit;
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+    cursor: pointer;
 }
 
-a:focus {
-  color: rgb(18, 206, 164) !important;
+.btn:focus {
+    outline: 0.5rem auto #4d90fe;
 }
 
-a:after {
-  color: rgb(18, 206, 164) !important;
+.visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
 }
 
-.navbar {
-  font-size: 14px;
-  background-color: #000 !important;
+/* Profile Section */
+
+.profile {
+    padding: 5rem 0;
 }
 
-.navbar-brand {
-  font-size: 14px;
-  color: rgb(18, 206, 164) !important;
+.profile::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
- .active .nav-link {
-  color: rgb(18, 206, 164) !important;
-}
-/* CUSTOMIZE THE ALBUM
--------------------------------------------------- */
-
-/* Carousel base class */
-.jumbotron {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  margin-bottom: 0;
-  border-radius: 0;
-  background-color: #000;
+.profile-image {
+    float: left;
+    width: calc(33.333% - 1rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem;
 }
 
-.jumbotron p:last-child {
-  margin-bottom: 0;
+.profile-image img {
+    border-radius: 50%;
 }
 
-.jumbotron-heading {
-  font-size: 24px;
+.profile-user-settings,
+.profile-stats,
+.profile-bio {
+    float: left;
+    width: calc(66.666% - 2rem);
 }
 
-.jumbotron p {
-  font-size: 14px;
+.profile-user-settings {
+    margin-top: 1.1rem;
 }
 
-.jumbotron .container {
-  max-width: 40rem;
+.profile-user-name {
+    display: inline-block;
+    font-size: 3.2rem;
+    font-weight: 300;
 }
 
-.jumbotron .social ul li {
-  margin-right: 10px;
-  font-size: 12px;
-  display: inline;
+.profile-edit-btn {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    border: 0.1rem solid #dbdbdb;
+    border-radius: 0.3rem;
+    padding: 0 2.4rem;
+    margin-left: 2rem;
 }
 
-
-/* Featurettes
-------------------------- */
-
-.featurette {
-  background-color: #fff;
+.profile-settings-btn {
+    font-size: 2rem;
+    margin-left: 1rem;
 }
 
-.profileText {
-  height: 15em;
-  margin-top: 1em;
+.profile-stats {
+    margin-top: 2.3rem;
 }
 
-hr {
-  margin-top: 15px;
-  margin-bottom: 30px;
+.profile-stats li {
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-right: 4rem;
+    cursor: pointer;
 }
 
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-size: 18px !important;
-  line-height: 3;
+.profile-stats li:last-of-type {
+    margin-right: 0;
 }
 
-.featurette h1 {
-  font-size: 24px;
+.profile-bio {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 2.3rem;
 }
 
-.featurette p.lead {
-  font-size: 12px;
-  line-height: 0.5;
+.profile-real-name,
+.profile-stat-count,
+.profile-edit-btn {
+    font-weight: 600;
 }
 
-/* MARKETING CONTENT
--------------------------------------------------- */
+/* Gallery Section */
 
-/* Center align the text within the three columns below the carousel */
-.work .col-md-6 {
-  text-align: center;
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -1rem -1rem;
+    padding-bottom: 3rem;
 }
 
-.work h2 {
-  font-size: 18px;
-  margin-top: 4rem;
+.gallery-item {
+    position: relative;
+    flex: 1 0 22rem;
+    margin: 1rem;
+    color: #fff;
+    cursor: pointer;
 }
 
-.work .col-md-6 p {
-  font-size: 12px;
-  margin-bottom: 4rem;
+.gallery-item:hover .gallery-item-info,
+.gallery-item:focus .gallery-item-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
-.work a {
-  color: #5a5a5a;
+.gallery-item-info {
+    display: none;
 }
 
-.work a:hover {
-  color: #b4b4b4;
+.gallery-item-info li {
+    display: inline-block;
+    font-size: 1.7rem;
+    font-weight: 600;
 }
 
-
-/* CONTACT FORM
--------------------------------------------------- */
-.contact {
-  height: 475px;
-  background-color: #111;
+.gallery-item-likes {
+    margin-right: 2.2rem;
 }
 
-.contact h1 {
-  font-size: 24px;
+.gallery-item-type {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2.5rem;
+    text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
 }
 
-.contact-form .form-field {
-  margin: 35px 0;
+.fa-clone,
+.fa-comment {
+    transform: rotateY(180deg);
 }
 
-.contact-form .input-text {
-  display: block;
-  width: 100%;
-  height: 36px;
-  border-width: 0 0 1px 0;
-  border-color: #b4b4b4;
-  background-color: #111;
-  color: #b4b4b4;
-  font-size: 18px;
-  line-height: 24px;
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.contact-form .input-text:focus {
-  outline: none;
+/* Loader */
+
+.loader {
+    width: 5rem;
+    height: 5rem;
+    border: 0.6rem solid #999;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    margin: 0 auto;
+    animation: loader 500ms linear infinite;
 }
 
-.contact-form .input-text:focus + .label, .contact-form .input-text.not-empty + .label {
-  -webkit-transform: translateY(-24px);
-          transform: translateY(-24px);
+/* Media Query */
+
+@media screen and (max-width: 40rem) {
+    .profile {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 4rem 0;
+    }
+
+    .profile::after {
+        display: none;
+    }
+
+    .profile-image,
+    .profile-user-settings,
+    .profile-bio,
+    .profile-stats {
+        float: none;
+        width: auto;
+    }
+
+    .profile-image img {
+        width: 7.7rem;
+    }
+
+    .profile-user-settings {
+        flex-basis: calc(100% - 10.7rem);
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+    }
+
+    .profile-user-name {
+        font-size: 2.2rem;
+    }
+
+    .profile-edit-btn {
+        order: 1;
+        padding: 0;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .profile-edit-btn {
+        margin-left: 0;
+    }
+
+    .profile-bio {
+        font-size: 1.4rem;
+        margin-top: 1.5rem;
+    }
+
+    .profile-edit-btn,
+    .profile-bio,
+    .profile-stats {
+        flex-basis: 100%;
+    }
+
+    .profile-stats {
+        order: 1;
+        margin-top: 1.5rem;
+    }
+
+    .profile-stats ul {
+        display: flex;
+        text-align: center;
+        padding: 1.2rem 0;
+        border-top: 0.1rem solid #dadada;
+        border-bottom: 0.1rem solid #dadada;
+    }
+
+    .profile-stats li {
+        font-size: 1.4rem;
+        flex: 1;
+        margin: 0;
+    }
+
+    .profile-stat-count {
+        display: block;
+    }
 }
 
-.contact-form .label {
-  position: absolute;
-  left: 10px;
-  bottom: 11px;
-  font-size: 14px;
-  line-height: 24px;
-  cursor: text;
-  -webkit-transition: -webkit-transform .2s ease-in-out;
-  transition: -webkit-transform .2s ease-in-out;
-  transition: transform .2s ease-in-out;
-  transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+/* Spinner Animation */
+
+@keyframes loader {
+    to {
+        transform: rotate(360deg);
+    }
 }
 
-.contact-form .submit-btn {
-  display: inline-block;
-  background-color: #000;
-  color: #b4b4b4;
-  font-size: 14px;
-  line-height: 24px;
-  padding: 8px 16px;
-  border: none;
-  cursor: pointer;
-}
+/*
 
-.contact-form input:hover {
-  color: rgb(18, 206, 164) !important;
-}
+The following code will only run if your browser supports CSS grid.
 
-.note {
-  position: absolute;
-  left: 0;
-  bottom: 10px;
-  width: 100%;
-  text-align: center;
-  font-family: Lusitana, serif;
-  font-size: 16px;
-  line-height: 21px;
-}
-.note .link {
-  color: #888;
-  text-decoration: none;
-}
-.note .link:hover {
-  text-decoration: underline;
-}
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox & floated styling. 
 
+*/
 
-/* footer
--------------------------------------------------- */
-footer {
-  position: absolute;
-  padding-top: 20px;
-  padding-bottom: 10px;
-  width: 100%;
-  height: 100px;
-  background-color: #000;
-}
-footer p {
-  font-size: 12px;
-}
+@supports (display: grid) {
+    .profile {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(3, auto);
+        grid-column-gap: 3rem;
+        align-items: center;
+    }
 
-footer .social ul li {
-  margin-right: 10px;
-  font-size: 14px;
-  display: inline;
-}
+    .profile-image {
+        grid-row: 1 / -1;
+    }
 
-/* RESPONSIVE CSS
--------------------------------------------------- */
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+        grid-gap: 2rem;
+    }
 
-@media (min-width: 40em) {
-  /* Bump up size of carousel content */
-  .carousel-caption p {
-    margin-bottom: 1.25rem;
-    font-size: 1.25rem;
-    line-height: 1.4;
-  }
+    .profile-image,
+    .profile-user-settings,
+    .profile-stats,
+    .profile-bio,
+    .gallery-item,
+    .gallery {
+        width: auto;
+        margin: 0;
+    }
 
-  .featurette-heading {
-    font-size: 50px;
-  }
-}
+    @media (max-width: 40rem) {
+        .profile {
+            grid-template-columns: auto 1fr;
+            grid-row-gap: 1.5rem;
+        }
 
-@media (min-width: 62em) {
-  .featurette-heading {
-    margin-top: 7rem;
-  }
+        .profile-image {
+            grid-row: 1 / 2;
+        }
+
+        .profile-user-settings {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-gap: 1rem;
+        }
+
+        .profile-edit-btn,
+        .profile-stats,
+        .profile-bio {
+            grid-column: 1 / -1;
+        }
+
+        .profile-user-settings,
+        .profile-edit-btn,
+        .profile-settings-btn,
+        .profile-bio,
+        .profile-stats {
+            margin: 0;
+        }
+    }
 }
