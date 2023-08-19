@@ -1,172 +1,278 @@
-<!DOCTYPE html>
-<html>
-<head>
+<header>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-</head>
-    
-<body>
 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand js-scroll-trigger pl-3" href="#home">&lsaquo;code:vesper&rsaquo;</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse p-2" id="navbarCollapse">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">/ profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#work">/ work</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">/ contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+	<div class="container">
 
-    <!-- ABOUT -->
+		<div class="profile">
 
-    <section id="home" class="jumbotron text-center">
-      <div class="container">
-        <h1 class="jumbotron-heading">{ux.design.code}</h1>
-        <p class="lead text-muted">hacker: jasonfengcobb</p>
-        <div class="social text-center">
-          <ul>
-            <li><a href="https://github.com/jasonfengcobb" target="_blank">/ gitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/jasonfcobb/" target="_blank">// linkedIn</a></li>
-            <li><a href="https://www.freecodecamp.org/jasonfengcobb" target="_blank">/// freeCodeCamp</a></li>
-          </ul>
-        </div>
-        <!-- <p>
-          <a href="#" class="btn btn-primary">Main call to action</a>
-          <a href="#" class="btn btn-secondary">Secondary action</a>
-        </p> -->
-      </div>
-    </section>
+			<div class="profile-image">
 
-    <div  id="about" class="container-fluid">
+				<img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" alt="">
 
-      <div class="row featurette">
-        <div class="col-md-6 p-0 profileText">
-          <div class="pl-5 pr-5">
-            <!-- <h1>/ about</h1> -->
-            <h2 class="featurette-heading">hacker profile:</h2>
-            <hr>
-            <p class="lead ">name: jason feng cobb</p>
-            <p class="lead text-muted">location: new york city</p>
-            <p class="lead text-muted">language: html5, css3, javaScript</p>
-            <p class="lead text-muted">other skills: ux / ui design</p>
-            <p class="lead text-muted">years of field experience: 12+</p>
-          </div>
-        </div>
-        <div class="col-md-6 p-0">
-          <img class="img-fluid" src="https://drive.google.com/uc?export=view&id=1UejYwpNyrC44EnRWGv_6dL6Dq5znfrck" alt="Jason Feng Cobb Photo">
-        </div>
-      </div>
-    </div>
-    <!-- /END ABOUT -->
+			</div>
 
+			<div class="profile-user-settings">
 
-    <!-- PROJECTS -->
+				<h1 class="profile-user-name">janedoe_</h1>
 
-    <div id="work" class="container-fluid work">
-      <!-- Two columns of PROJECTS below the ABOUT -->
-      <div class="row">
-        <div class="col-md-6 p-0 mt-5 mb-5">
-          <h2><a href="#">project 1 placeholder<a></h2>
-          <p class="text-muted">Donec sed odio dui.</p>
-        </div><!-- /.col-md-6 -->
-        <div class="col-md-6 p-0 mt-5 mb-5">
-          <h2><a href="#">project 2 placeholder<a></h2>
-          <p class="text-muted">Duis mollis, est non commodo luctus.</p>
-        </div><!-- /.col-md-6 -->
-      </div><!-- /.row -->
+				<button class="btn profile-edit-btn">Edit Profile</button>
 
-      <!-- Two columns of PROJECTS below the ABOUT -->
-      <div class="row">
-        <div class="col-md-6 p-0 mt-5 mb-5">
-          <h2><a href="#">project 3 placeholder<a></h2>
-          <p class="text-muted">Donec sed odio dui.</p>
-        </div><!-- /.col-md-6 -->
-        <div class="col-md-6 p-0 mt-5 mb-5">
-          <h2><a href="#">project 4 placeholder<a></h2>
-          <p class="text-muted">Duis mollis, est non commodo luctus.</p>
-        </div><!-- /.col-md-6 -->
-      </div><!-- /.row -->
+				<button class="btn profile-settings-btn" aria-label="profile settings"><i class="fas fa-cog" aria-hidden="true"></i></button>
 
-      <!-- Two columns of PROJECTS below the ABOUT -->
-      <div class="row">
-        <div class="col-md-6 p-0 mt-5 mb-5">
-          <h2><a href="#">project 5 placeholder<a></h2>
-          <p class="text-muted">Donec sed odio dui.</p>
-        </div><!-- /.col-md-6 -->
-        <div class="col-md-6 p-0 mt-5 mb-5">
-          <h2><a href="#">project 6 placeholder<a></h2>
-          <p class="text-muted">Duis mollis, est non commodo luctus.</p>
-        </div><!-- /.col-md-6 -->
-      </div><!-- /.row -->
+			</div>
 
-    </div>
+			<div class="profile-stats">
 
+				<ul>
+					<li><span class="profile-stat-count">164</span> posts</li>
+					<li><span class="profile-stat-count">188</span> followers</li>
+					<li><span class="profile-stat-count">206</span> following</li>
+				</ul>
 
-    <!-- CONTACT -->
-    <div id="contact" class="container-fluid contact pt-5">
-      <h1 class="jumbotron-heading text-center">/ contact</h1>
-        <form class="mt-5" method="post" action="php/send_form_email.php">
-          <div class="contact-form row">
-            <div class="form-field col-sm-4 pl-4 pr-4 ml-auto">
-              <input id="name" class="input-text js-input" type="text" required>
-              <label class="label pl-4" for="name">name</label>
-            </div>
-            <div class="form-field col-sm-4 pl-4 pr-4 mr-auto">
-              <input id="email_from" class="input-text js-input" type="email" required>
-               <label class="label pl-4" for="email_from">email</label>
-            </div>
-          </div>
+			</div>
 
-          <div class="contact-form row">
-              <div class="form-field col-sm-8 pl-4 pr-4 mx-auto">
-              <input id="message" class="input-text js-input" type="text" required>
-              <label class="label pl-4" for="message">message</label>
-            </div>
-          </div>
-          <div class="contact-form row">
-            <div class="form-field col-sm-12 text-center">
-              <input class="submit-btn" type="submit" value="submit">
-            </div>
-          </div>
-        </form>
-    </div>
+			<div class="profile-bio">
 
-    <!-- FOOTER -->
-    <footer>
-      <div class="container-fluid pl-5 pr-5">
-        <div class="social text-center">
-          <ul>
-            <li><a href="https://github.com/jasonfengcobb" target="_blank">/ gitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/jasonfcobb/" target="_blank">// linkedIn</a></li>
-            <li><a href="https://www.freecodecamp.org/jasonfengcobb" target="_blank">/// freeCodeCamp</a></li>
-          </ul>
-        </div>
-        <p class="float-right"><a class="js-scroll-trigger" style="color: rgb(18, 206, 164)" href="#home">back to top</a></p>
-        <p>&lsaquo;code:vesper&rsaquo; &copy; 2017. all rights reserved.</p>
-      </div>
-    </footer>
+				<p><span class="profile-real-name">Jane Doe</span> Lorem ipsum dolor sit, amet consectetur adipisicing elit 📷✈️🏕️</p>
 
+			</div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script>window.jQuery || document.write('<script src="bootstrap-4.0.0-beta/assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="bootstrap-4.0.0-beta/assets/js/vendor/popper.min.js"></script>
-    <script src="bootstrap-4.0.0-beta/dist/js/bootstrap.min.js"></script>
-    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="bootstrap-4.0.0-beta/assets/js/vendor/holder.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="bootstrap-4.0.0-beta/assets/js/ie10-viewport-bug-workaround.js"></script>
-            
-  </body>
-</html>
+		</div>
+		<!-- End of profile section -->
+
+	</div>
+	<!-- End of container -->
+
+</header>
+
+<main>
+
+	<div class="container">
+
+		<div class="gallery">
+
+			<div class="gallery-item" tabindex="0">
+
+				<img src="https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?w=500&h=500&fit=crop" class="gallery-image" alt="">
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 56</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 2</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="gallery-item" tabindex="0">
+
+				<img src="https://images.unsplash.com/photo-1497445462247-4330a224fdb1?w=500&h=500&fit=crop" class="gallery-image" alt="">
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 89</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 5</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="gallery-item" tabindex="0">
+
+				<img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=500&h=500&fit=crop" class="gallery-image" alt="">
+
+				<div class="gallery-item-type">
+
+					<span class="visually-hidden">Gallery</span><i class="fas fa-clone" aria-hidden="true"></i>
+
+				</div>
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 42</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 1</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="gallery-item" tabindex="0">
+
+				<img src="https://images.unsplash.com/photo-1502630859934-b3b41d18206c?w=500&h=500&fit=crop" class="gallery-image" alt="">
+
+				<div class="gallery-item-type">
+
+					<span class="visually-hidden">Video</span><i class="fas fa-video" aria-hidden="true"></i>
+
+				</div>
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 38</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 0</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="gallery-item" tabindex="0">
+
+				<img src="https://images.unsplash.com/photo-1498471731312-b6d2b8280c61?w=500&h=500&fit=crop" class="gallery-image" alt="">
+
+				<div class="gallery-item-type">
+
+					<span class="visually-hidden">Gallery</span><i class="fas fa-clone" aria-hidden="true"></i>
+
+				</div>
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 47</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 1</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="gallery-item" tabindex="0">
+
+				<img src="https://images.unsplash.com/photo-1515023115689-589c33041d3c?w=500&h=500&fit=crop" class="gallery-image" alt="">
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 94</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 3</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="gallery-item" tabindex="0">
+
+				<img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=500&h=500&fit=crop" class="gallery-image" alt="">
+
+				<div class="gallery-item-type">
+
+					<span class="visually-hidden">Gallery</span><i class="fas fa-clone" aria-hidden="true"></i>
+
+				</div>
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 52</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 4</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="gallery-item" tabindex="0">
+
+				<img src="https://images.unsplash.com/photo-1515814472071-4d632dbc5d4a?w=500&h=500&fit=crop" class="gallery-image" alt="">
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 66</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 2</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="gallery-item" tabindex="0">
+
+				<img src="https://images.unsplash.com/photo-1511407397940-d57f68e81203?w=500&h=500&fit=crop" class="gallery-image" alt="">
+
+				<div class="gallery-item-type">
+
+					<span class="visually-hidden">Gallery</span><i class="fas fa-clone" aria-hidden="true"></i>
+
+				</div>
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 45</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 0</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="gallery-item" tabindex="0">
+
+				<img src="https://images.unsplash.com/photo-1518481612222-68bbe828ecd1?w=500&h=500&fit=crop" class="gallery-image" alt="">
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 34</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 1</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="gallery-item" tabindex="0">
+
+				<img src="https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=500&h=500&fit=crop" class="gallery-image" alt="">
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 41</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 0</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="gallery-item" tabindex="0">
+
+				<img src="https://images.unsplash.com/photo-1423012373122-fff0a5d28cc9?w=500&h=500&fit=crop" class="gallery-image" alt="">
+
+				<div class="gallery-item-type">
+
+					<span class="visually-hidden">Video</span><i class="fas fa-video" aria-hidden="true"></i>
+
+				</div>
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 30</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 2</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+		</div>
+		<!-- End of gallery -->
+
+		<div class="loader"></div>
+
+	</div>
+	<!-- End of container -->
+
+</main>
